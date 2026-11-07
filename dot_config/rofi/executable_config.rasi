@@ -1,1 +1,1 @@
-@import "/usr/share/rofi/themes/solarized_alternate.rasi"
+@import "~/.config/rofi/catppuccin-default.rasi"

@@ -115,18 +115,40 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-#
-# Status Bar:
-#
+########################################################################
+########################################################################
+####
+####                    Status Bar
+####
+########################################################################
+########################################################################
+
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #000000 #000000 #ffffff #000000   #000000
-client.focused_inactive #000000 #000000 #ffffff #000000   #000000
-client.unfocused        #000000 #000000 #888888 #000000   #000000
-client.urgent           #000000 #000000 #ffffff #000000   #000000
-client.placeholder      #000000 #000000 #ffffff #000000   #000000
-client.background       #ffffff
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
+# bar
+bar {
+  colors {
+    background         $base
+    statusline         $text
+    focused_statusline $text
+    focused_separator  $base
+
+    # target           border bg        text
+    focused_workspace  $base  $mauve    $crust
+    active_workspace   $base  $surface2 $text
+    inactive_workspace $base  $base     $text
+    urgent_workspace   $base  $red      $crust
+  }
+}
+
 
 ########################################################################
 ########################################################################
@@ -197,7 +219,7 @@ bindsym $mod+l exec "sleep 0.1 && i3lock --blur 5"
 exec xrandr --output HDMI-1 --mode 1920x1080 --rate 60 --scale 1x1
 #exec xrandr --auto --output HDMI-1 --mode 1920x1080 --above HDMI-2
 
-exec feh --bg-fill ~/.config/i3/wallpaper.png
+exec nitrogen --restore
 
 exec --no-startup-id dunst
 exec --no-startup-id picom
@@ -248,26 +270,3 @@ set $base #1e1e2e
 set $mantle #181825
 set $crust #11111b
 
-# target                 title     bg    text   indicator  border
-client.focused           $lavender $base $text  $rosewater $lavender
-client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
-client.unfocused         $overlay0 $base $text  $rosewater $overlay0
-client.urgent            $peach    $base $peach $overlay0  $peach
-client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
-client.background        $base
-
-# bar
-bar {
-  colors {
-    background         $base
-    statusline         $text
-    focused_statusline $text
-    focused_separator  $base
-
-    # target           border bg        text
-    focused_workspace  $base  $mauve    $crust
-    active_workspace   $base  $surface2 $text
-    inactive_workspace $base  $base     $text
-    urgent_workspace   $base  $red      $crust
-  }
-}
