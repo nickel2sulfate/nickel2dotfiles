@@ -3,7 +3,7 @@ font pango:Hack 9
 floating_modifier $mod
 
 # start a terminal
-set $term 
+set $term kitty
 bindsym $mod+Return exec $term
 
 # kill focused window
