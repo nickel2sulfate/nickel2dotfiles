@@ -122,33 +122,9 @@ bindsym $mod+r mode "resize"
 ####
 ########################################################################
 ########################################################################
-
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-
-# target                 title     bg    text   indicator  border
-client.focused           $lavender $base $text  $rosewater $lavender
-client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
-client.unfocused         $overlay0 $base $text  $rosewater $overlay0
-client.urgent            $peach    $base $peach $overlay0  $peach
-client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
-client.background        $base
-
-# bar
-bar {
-  colors {
-    background         $base
-    statusline         $text
-    focused_statusline $text
-    focused_separator  $base
-
-    # target           border bg        text
-    focused_workspace  $base  $mauve    $crust
-    active_workspace   $base  $surface2 $text
-    inactive_workspace $base  $base     $text
-    urgent_workspace   $base  $red      $crust
-  }
-}
-
+        
+exec_always --no-startup-id ~/.config/polybar/executable_launch.sh
+exec_always --no-startup-id ~/.config/polybar/scripts/weather-openmap.sh
 
 ########################################################################
 ########################################################################
@@ -228,6 +204,7 @@ exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id discord
 exec --no-startup-id autotiling
+exec --no-startup-id flameshot
 
 exec_always autotiling -w 1 3 5 7 9
 exec_always mkfifo /tmp/xobpipe && tail -f /tmp/xobpipe | xob -t 2170 & disown
