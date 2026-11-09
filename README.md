@@ -4,3 +4,6 @@ Hi I am trying to make config files for my beautiful bouncing baby cachyos i3WM 
 ### Credits
 * Dot File Manager [chezmoi](https://www.chezmoi.io/)
 * Theme [catppuccin-mocha](https://catppuccin.com/palette/)
+
+### Credits(dot files not included yet)
+* VSCode Theme (https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
