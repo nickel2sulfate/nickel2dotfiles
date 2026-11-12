@@ -6,6 +6,6 @@ Hi I am trying to make config files for my beautiful bouncing baby cachyos i3WM 
 * Theme [catppuccin-mocha](https://catppuccin.com/palette/)
 
 ### Credits(dot files not included yet)
-* [VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
-* [Telegram](https://github.com/catppuccin/telegram)
-* [Firefox](https://github.com/catppuccin/userstyles/tree/main/styles/stylus)
+* VsCode [Link](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+* Telegram [Link](https://github.com/catppuccin/telegram)
+* Firefox [Link](https://github.com/catppuccin/userstyles/tree/main/styles/stylus)
