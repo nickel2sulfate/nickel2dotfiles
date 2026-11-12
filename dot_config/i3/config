@@ -206,6 +206,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id discord
 exec --no-startup-id autotiling
 exec --no-startup-id flameshot
+exec --no-startup-id ~/.screenlayout/monitor.sh
 
 exec_always autotiling -w 1 3 5 7 9
 exec_always mkfifo /tmp/xobpipe && tail -f /tmp/xobpipe | xob -t 2170 & disown
