@@ -85,7 +85,8 @@ format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
 
 [git_status]
  style = "bg:yellow"
- format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+ format = '[[($all_status$ahead_behind)](fg:crust bg:yellow)]($style)'
+ 
 [nodejs]
 symbol = ""
 style = "bg:green"
@@ -163,7 +164,7 @@ style = "bg:lavender"
 format = '[[  $time ](fg:crust bg:lavender)]($style)'
 
 [line_break]
-disabled = true
+disabled = false
 
 [character]
 disabled = false
