@@ -6,7 +6,7 @@
     height = 300
     origin = top-right
     offset = 10x50
-    color = "#000000"
+    #color = "#000000"
     frame_width = 2
 
     # allow a small subset of html markup:
